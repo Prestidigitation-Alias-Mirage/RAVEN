@@ -1,0 +1,7 @@
+services:
+  raven:
+    build: .
+    working_dir: /app
+    volumes:
+      - ./runs:/app/runs
+    command: ["run", "--target", "mock", "--suite", "baseline"]

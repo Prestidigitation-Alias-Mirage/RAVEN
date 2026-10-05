@@ -1,0 +1,17 @@
+.venv/
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+coverage.xml
+htmlcov/
+.DS_Store
+
+# Local run output may contain sensitive security-test artifacts.
+runs/*
+!runs/.gitkeep
+
+# Python packaging artifacts
+*.egg-info/

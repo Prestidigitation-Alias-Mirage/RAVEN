@@ -1,0 +1,29 @@
+run:
+  name: local-baseline
+  suite: baseline
+  max_iterations: 1
+  seed: 1337
+
+authorization:
+  confirmed: true
+  scope_reference: local-development-lab
+
+target:
+  adapter: mock
+  name: local-test-target
+  model: mock-v0
+
+evaluation:
+  strategy: rules
+
+storage:
+  backend: jsonl
+  directory: runs
+
+safety:
+  request_budget: 25
+  max_concurrency: 1
+  max_mutation_depth: 0
+  request_timeout_seconds: 30
+  allowed_targets:
+    - mock
